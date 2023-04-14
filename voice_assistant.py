@@ -56,8 +56,8 @@ def sendEmail(to,content):
     server = smtplib.SMTP('smtp.edu.in', 587)
     server.ehlo()
     server.starttls()
-    server.login('mca22.aryan.tyagi@sunstone.edu.in', 'aryantyagi123')
-    server.sendmail('mca22.aryan.tyagi@sunstone.edu.in',to, content)
+    server.login('write your Email id', 'Password of Email')
+    server.sendmail('Email receiver email id',to, content)
     server.close()
     
     
@@ -114,7 +114,7 @@ if __name__ == "__main__":
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "mca22.aryan.tyagi@sunstone.edu.in"
+                to = "write your email id"
                 sendEmail(to,content)
                 speak("Email has been send!")
                 
